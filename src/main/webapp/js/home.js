@@ -107,4 +107,25 @@ document.addEventListener('DOMContentLoaded', function()
 	    const value = e.target.innerHTML;
 	    value === '' && (e.target.innerHTML = textAreaPlaceholder);
 	});
+	
+	textArea.addEventListener('keydown',function (event)
+	{
+		if (event.keyCode === 9)
+		{ // tab key
+	        event.preventDefault();  // this will prevent us from tabbing out of the editor
+	
+	        // now insert four non-breaking spaces for the tab key
+	        var doc = textArea.ownerDocument.defaultView;
+	        var sel = doc.getSelection();
+	        var range = sel.getRangeAt(0);
+	
+	        var tabNode = document.createTextNode("\u00a0\u00a0\u00a0\u00a0");
+	        range.insertNode(tabNode);
+	
+	        range.setStartAfter(tabNode);
+	        range.setEndAfter(tabNode); 
+	        sel.removeAllRanges();
+	        sel.addRange(range);
+		}
+	});
 });

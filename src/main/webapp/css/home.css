@@ -28,6 +28,7 @@
 	color: #548d72;
 	font-weight:bold;
 	padding-left: 15px;
+	overflow:auto;
 }
 
 .actions
