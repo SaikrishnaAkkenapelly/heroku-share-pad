@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function()
 			if(textArea.innerHTML != "" && textArea.innerHTML != textAreaPlaceholder)
 			{
 				text.value = textArea.innerHTML;
-				mainForm.action = "share";
+				mainForm.action = "/share";
 				mainForm.submit();
 			}
 			else
