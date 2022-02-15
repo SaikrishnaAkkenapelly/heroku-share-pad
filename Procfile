@@ -1,0 +1,1 @@
+web: java -jar target/Share-Pad-Share-Pad-1.0.jar
