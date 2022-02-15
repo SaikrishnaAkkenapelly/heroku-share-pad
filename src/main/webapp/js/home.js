@@ -128,4 +128,10 @@ document.addEventListener('DOMContentLoaded', function()
 	        sel.addRange(range);
 		}
 	});
+	
+	if(url.value != "")
+	{
+		url.style.color = "red";
+		setTimeout(function(){url.style.color = "#66678e";},500);
+	}
 });
